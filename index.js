@@ -1,4 +1,4 @@
-var worker = new SharedWorker('test.js');
+var worker = new SharedWorker('shared-worker.js');
 var log = document.getElementById('log');
 worker.port.addEventListener('message', function(e) {
   log.textContent += '\n' + e.data;

@@ -1,1 +1,2 @@
+rm *.html
 jade *.jade
