@@ -7,6 +7,7 @@
     , window = require('window')
     , addWindow
     , sendMessage
+    , Notifications = window.webkitNotifications || window.mozNotifications
     ;
 
   worker.port.addEventListener('message', function (e) {
@@ -47,9 +48,22 @@
     };
   }());
 
+  function askPermissionForNotifications() {
+    console.log('Receiver asking permission to use remote');
+    Notifications.requestPermission(function () {
+      if (0 !== Notifications.checkPermission()) {
+        return; 
+      }
+
+      // Browser supports it :)
+      Notifications.createHTMLNotification('inner.html').show();
+    });
+  }
+
   function attachHandlers() {
     $('body').delegate('.js-add-iframe', 'click', addIframe);
     $('body').delegate('.js-add-window', 'click', addWindow);
+    $('body').delegate('.js-add-notifications', 'click', askPermissionForNotifications);
     $('body').delegate('form.js-messenger', 'submit', sendMessage);
   }
 

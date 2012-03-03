@@ -144,3 +144,16 @@ Send a message from a form
               port.postMessage('a newcomer has arrived with the message: ' + event.data);
             });
           }
+
+Stage 6
+===
+
+Added Desktop Notifications using webkitNotification and mozNotification.
+
+0. Request permission from user
+
+  You can only do this once (without hardcore clearing the cache - so do it right!)
+
+0. Debugging is impossible... but oh well
+
+W00T!
