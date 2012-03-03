@@ -1,0 +1,23 @@
+{
+  "author": "AJ ONeal <coolaj86@gmail.com> (http://coolaj86.info/)",
+  "name": "shared-workers-example",
+  "description": "A working example of shared web-workers",
+  "version": "0.3.0",
+  "repository": {
+    "url": ""
+  },
+  "engines": {
+    "node": "*"
+  },
+  "main": "lib/index",
+  "lib": "lib",
+  "browserDependencies": {
+    "domready": "0.2.x",
+    "bonzo": "1.x",
+    "qwery": "3.x",
+    "bean": "0.4.x"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "optionalDependencies": {}
+}

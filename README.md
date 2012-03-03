@@ -83,3 +83,31 @@ The examples have really crummy javascript examples. Rewrite!
     All events updated to use `addEventListener`
 
 Awesome. Not broken yet.
+
+Stage 4
+===
+
+Now I want to see interaction, so I need a DOM library and a form to send messages.
+
+  0. Install pakmanager
+
+          npm install pakmanager
+
+  0. Create a package
+
+          # just added a console.log (so that the file isn't empty), will convert main index.js later
+          touch lib/index.js
+          npm init
+          # edit package.json to add `domReady`, `bean` (events), `bonzo` (DOM manipulations), and `qwery` (css selection)
+          # add "main" as "lib/index" and "lib" as "lib"
+
+  0. Add script tags for `pakmanaged.js` in `index.jade` and `inner.jade`
+
+    These tags must come first so that the latter files have access
+
+  0. Modify build script
+
+          # add at end of build.sh
+          pakmanager build
+
+  0. Added button and event handlers to open new iFrames or windows for inner.html instances
