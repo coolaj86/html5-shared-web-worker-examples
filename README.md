@@ -56,3 +56,30 @@ Without adding any functionality, I want to refactor the code.
           # open index.html in a browser
 
 Cool. It still works.
+
+Stage 3
+===
+
+The examples have really crummy javascript examples. Rewrite!
+
+  0. strict mode
+
+    Everything gets wrapped in a strict-mode closure for safe-keeping
+
+          (function () {
+            "use strict";
+
+            ... previous content goes here ...
+          }());
+
+  0. No magic globals
+
+    They broke strict mode by using `onconnect =` rather than `self.onconnect =`. Fixed
+
+  0. No magic events
+
+    `onmessage` automatically invokes `port.start()`. That's just weird.
+
+    All events updated to use `addEventListener`
+
+Awesome. Not broken yet.
