@@ -157,3 +157,10 @@ Added Desktop Notifications using webkitNotification and mozNotification.
 0. Debugging is impossible... but oh well
 
 W00T!
+
+Stage 7
+===
+
+Houstin, we have remote control!!!
+
+Can't type from Notifications box, but can Bark!!! Ruff ruff!
