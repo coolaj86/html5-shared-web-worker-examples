@@ -1,3 +1,8 @@
+Shared WebWorkers + Desktop Notifications = Remote Control
+===
+
+Think of the possibilities...
+
 Stage 1
 ===
 
