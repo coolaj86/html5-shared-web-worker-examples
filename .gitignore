@@ -1,1 +1,4 @@
 *.html
+pakmanaged.*
+.*.sw*
+node_modules
