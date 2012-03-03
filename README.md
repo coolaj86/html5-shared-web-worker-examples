@@ -111,3 +111,36 @@ Now I want to see interaction, so I need a DOM library and a form to send messag
           pakmanager build
 
   0. Added button and event handlers to open new iFrames or windows for inner.html instances
+
+Stage 5
+===
+
+Send a message from a form
+
+  0. Add form with submit button
+
+    Easy enough, no trickery here
+
+  0. Get the message through the webworker to the peers
+
+    Turns out that `event.ports` is a rabbit hole.
+    It's useless.
+    It isn't an Array or an Object.
+    You can only ever access ports[0].
+    It's part of the spec that you can't access ports[i]!
+    WTF!?!?!
+
+    So inside the worker I did something like this:
+
+          var channels = [];
+
+          function connect(ev) {
+            var newbie = ev.ports[0];
+            channels.push(newbie)
+            channels.forEach(function (port) {
+              if (newbie === port) {
+                return;
+              }
+              port.postMessage('a newcomer has arrived with the message: ' + event.data);
+            });
+          }
