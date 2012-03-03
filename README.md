@@ -3,6 +3,12 @@ Shared WebWorkers + Desktop Notifications = Remote Control
 
 Think of the possibilities...
 
+
+Sorry that this isn't a great article / walkthrough.
+I was having a power-hour just banging my way through.
+
+If you checkout the code and look at it, it's pretty simple though.
+
 Stage 1
 ===
 
