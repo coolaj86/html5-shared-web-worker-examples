@@ -161,6 +161,6 @@ W00T!
 Stage 7
 ===
 
-Houstin, we have remote control!!!
+Houston, we have remote control!!!
 
 Can't type from Notifications box, but can Bark!!! Ruff ruff!
